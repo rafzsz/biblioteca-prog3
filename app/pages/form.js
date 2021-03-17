@@ -1,6 +1,6 @@
 export const FormComponent = {
     template: `<div class="font-sans">
-    <div class="relative min-h-screen flex flex-col sm:justify-center items-center bg-gray-100 ">
+    <div class="relative min-h-screen flex flex-col sm:justify-center items-center bg-gray-100 bg-gradient-to-r from-blue-200 via-purple-300 to-yellow-400">
         <div class="relative sm:max-w-sm w-full">
             <div class="card bg-blue-400 shadow-lg  w-full h-full rounded-3xl absolute  transform -rotate-6"></div>
             <div class="card bg-red-400 shadow-lg  w-full h-full rounded-3xl absolute  transform rotate-6"></div>
@@ -61,9 +61,9 @@ export const FormComponent = {
     </div>
 </div>`,
     data() {
-      return {
-        tituloPagina: '',
-        tituloAcao: '',
+        return {
+            tituloPagina: '',
+            tituloAcao: '',
             livro: {
                 id: '',
                 editora: '',
@@ -74,9 +74,9 @@ export const FormComponent = {
                 quantidade: '',
                 tipo: ''
             }
-      }
+        }
     },
-    created: function() {
+    created: function () {
         if (this.$route.name == 'Visual') {
             this.tituloPagina = 'Visualizar um Livro';
         } else if (this.$route.name == 'Editar') {
